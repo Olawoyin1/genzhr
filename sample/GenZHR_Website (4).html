@@ -1,0 +1,1136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>The GenZ HR — Nigeria's Premier Career & HR Consulting Community</title>
+<link href="https://fonts.googleapis.com/css2?family=Cabinet+Grotesk:wght@400;500;700;800;900&family=Instrument+Serif:ital@0;1&family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --ink:#0C1117;
+  --blue:#0A2540; --blue-m:#0E3A62; --sky:#1A6BFF; --sky-l:#4D8FFF; --sky-pale:#EBF2FF;
+  --lime:#C8F135; --lime-d:#A8D020;
+  --mint:#00C98A; --mint-d:#00A872; --mint-l:rgba(0,201,138,.10);
+  --amber:#F0A500; --amber-l:#FAEEDA;
+  --off:#F7F8FC; --warm:#EEF1F8; --cream:#F7F5EF;
+  --muted:#5C6478; --white:#FFFFFF; --border:rgba(12,17,23,0.08);
+  --red:#DC2626; --purple:#7C3AED; --orange:#EA6C1E;
+}
+html{scroll-behavior:smooth}
+body{font-family:'Cabinet Grotesk',sans-serif;background:var(--white);color:var(--ink);overflow-x:hidden}
+
+/* ── NAV ── */
+nav{position:fixed;top:0;left:0;right:0;z-index:200;height:68px;padding:0 52px;display:flex;align-items:center;justify-content:space-between;background:rgba(255,255,255,0.96);backdrop-filter:blur(20px);border-bottom:1px solid var(--border);transition:all .3s}
+nav.scrolled{box-shadow:0 2px 20px rgba(12,17,23,.06)}
+.logo{display:flex;align-items:center;gap:10px;text-decoration:none}
+.logo-mark{width:34px;height:34px;background:var(--blue);border-radius:8px;display:flex;align-items:center;justify-content:center;font-weight:900;font-size:12px;color:var(--lime);letter-spacing:-.5px}
+.logo-text{font-weight:800;font-size:16px;color:var(--ink);letter-spacing:-.3px}
+.logo-text span{color:var(--sky)}
+.nav-links{display:flex;gap:28px;align-items:center}
+.nav-links a{font-size:13.5px;font-weight:600;color:var(--muted);text-decoration:none;transition:color .18s}
+.nav-links a:hover{color:var(--sky)}
+.nav-btns{display:flex;gap:8px;align-items:center}
+.btn-ghost{font-size:13px;font-weight:700;color:var(--ink);text-decoration:none;padding:8px 16px;border-radius:7px;border:1.5px solid var(--border);transition:all .18s}
+.btn-ghost:hover{border-color:var(--sky);color:var(--sky)}
+.btn-cta-nav{font-size:13px;font-weight:700;background:var(--blue);color:#fff;text-decoration:none;padding:9px 20px;border-radius:7px;transition:all .18s}
+.btn-cta-nav:hover{background:var(--sky);transform:translateY(-1px)}
+
+/* ── HERO ── */
+.hero{min-height:100vh;background:var(--blue);padding:130px 52px 100px;position:relative;overflow:hidden;display:grid;grid-template-columns:1.15fr 0.85fr;gap:56px;align-items:center}
+.hero-mesh{position:absolute;inset:0;pointer-events:none;background:radial-gradient(ellipse 70% 60% at 80% 20%,rgba(26,107,255,.22) 0%,transparent 60%),radial-gradient(ellipse 40% 50% at 10% 80%,rgba(200,241,53,.06) 0%,transparent 60%)}
+.hero-grid{position:absolute;inset:0;pointer-events:none;opacity:.035;background-image:linear-gradient(rgba(255,255,255,1) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,1) 1px,transparent 1px);background-size:52px 52px}
+.hero-tag{display:inline-flex;align-items:center;gap:8px;background:rgba(200,241,53,.12);border:1.5px solid rgba(200,241,53,.22);border-radius:4px;padding:6px 14px;margin-bottom:28px;font-size:11px;font-weight:800;letter-spacing:2px;text-transform:uppercase;color:var(--lime);animation:up .9s ease both}
+.tag-dot{width:7px;height:7px;background:var(--lime);border-radius:50%;animation:blink 2s infinite}
+@keyframes blink{0%,100%{opacity:1}50%{opacity:.2}}
+.hero-h{font-family:'Instrument Serif',serif;font-size:clamp(44px,5.5vw,76px);line-height:1.01;color:#fff;margin-bottom:24px;letter-spacing:-1px;animation:up .9s .08s ease both}
+.hero-h em{font-style:italic;color:var(--lime)}
+.hero-p{font-size:17px;line-height:1.8;color:rgba(255,255,255,.52);max-width:500px;margin-bottom:40px;animation:up .9s .16s ease both}
+.hero-p strong{color:rgba(255,255,255,.82)}
+.hero-acts{display:flex;gap:12px;flex-wrap:wrap;animation:up .9s .22s ease both}
+.btn-lime{background:var(--lime);color:var(--ink);padding:15px 36px;border-radius:7px;font-size:14.5px;font-weight:800;text-decoration:none;transition:all .25s;border:2px solid var(--lime);display:inline-block}
+.btn-lime:hover{background:var(--lime-d);transform:translateY(-2px);box-shadow:0 10px 32px rgba(200,241,53,.28)}
+.btn-outline-w{background:transparent;color:rgba(255,255,255,.65);padding:15px 36px;border-radius:7px;font-size:14.5px;font-weight:700;text-decoration:none;transition:all .25s;border:2px solid rgba(255,255,255,.16);display:inline-block}
+.btn-outline-w:hover{border-color:rgba(255,255,255,.45);color:#fff}
+.hero-stats{display:flex;gap:44px;margin-top:56px;padding-top:36px;border-top:1px solid rgba(255,255,255,.09);animation:up .9s .3s ease both;flex-wrap:wrap}
+.hs-val{font-family:'Instrument Serif',serif;font-size:40px;color:#fff;line-height:1}
+.hs-val span{color:var(--lime)}
+.hs-lbl{font-size:10.5px;font-weight:700;color:rgba(255,255,255,.3);text-transform:uppercase;letter-spacing:1px;margin-top:4px}
+.hero-r{position:relative;z-index:2;animation:up 1s .2s ease both}
+.hero-float{position:absolute;bottom:-14px;right:-14px;background:var(--lime);border-radius:12px;padding:14px 18px;box-shadow:0 14px 36px rgba(200,241,53,.25);z-index:3}
+.hf-val{font-family:'Instrument Serif',serif;font-size:26px;color:var(--ink);line-height:1}
+.hf-lbl{font-size:9px;font-weight:800;color:rgba(12,17,23,.5);margin-top:2px;text-transform:uppercase;letter-spacing:.8px}
+.hero-card{background:rgba(255,255,255,.05);border:1.5px solid rgba(255,255,255,.1);border-radius:18px;padding:32px;backdrop-filter:blur(10px)}
+.hc-title{font-size:10px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,.35);margin-bottom:18px}
+.hc-svc{display:flex;align-items:center;gap:12px;padding:12px 16px;border-radius:10px;transition:all .18s;border:1.5px solid transparent;cursor:default}
+.hc-svc:hover{background:rgba(255,255,255,.06);border-color:rgba(255,255,255,.1)}
+.hcs-ico{width:34px;height:34px;border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:16px;flex-shrink:0}
+.hcs-n{font-size:13px;font-weight:700;color:rgba(255,255,255,.8)}
+.hcs-d{font-size:11px;color:rgba(255,255,255,.28);margin-top:2px}
+@keyframes up{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:translateY(0)}}
+
+/* ── MARQUEE ── */
+.marquee{background:var(--lime);padding:14px 0;overflow:hidden}
+.marquee-track{display:flex;white-space:nowrap;animation:marquee 28s linear infinite}
+.marquee-item{display:inline-flex;align-items:center;gap:22px;padding:0 22px;font-size:11px;font-weight:800;letter-spacing:1.5px;text-transform:uppercase;color:var(--ink)}
+.msep{color:rgba(12,17,23,.28);font-size:16px}
+@keyframes marquee{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+
+/* ── AUDIENCE STATS BAR ── */
+.aud-bar{background:#fff;border-bottom:1px solid var(--border);padding:0 52px}
+.aud-inner{max-width:1160px;margin:0 auto;display:grid;grid-template-columns:repeat(5,1fr)}
+.aud-stat{padding:28px 24px;text-align:center;border-right:1px solid var(--border)}
+.aud-stat:last-child{border-right:none}
+.aud-stat:first-child{text-align:left;padding-left:0}
+.aud-n{font-family:'Instrument Serif',serif;font-size:36px;color:var(--ink);line-height:1;letter-spacing:-1px}
+.aud-n span{color:var(--mint)}
+.aud-l{font-size:11px;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:.7px;margin-top:5px}
+.aud-s{font-size:11px;color:var(--muted);margin-top:3px;line-height:1.4}
+.aud-badge{display:inline-block;background:var(--mint-l);color:var(--mint-d);font-size:10px;font-weight:700;padding:3px 9px;border-radius:20px;margin-top:6px}
+
+/* ── SECTION BASE ── */
+.sec{padding:100px 52px}
+.si{max-width:1160px;margin:0 auto}
+.eyebrow{font-size:10.5px;font-weight:800;text-transform:uppercase;letter-spacing:2px;color:var(--sky);margin-bottom:14px}
+.sec-h{font-family:'Instrument Serif',serif;font-size:clamp(34px,4vw,52px);color:var(--ink);line-height:1.12;margin-bottom:16px}
+.sec-h em{font-style:italic;color:var(--sky)}
+.sec-p{font-size:16px;line-height:1.8;color:var(--muted);max-width:560px}
+.btn-blue{background:var(--blue);color:#fff;padding:15px 34px;border-radius:7px;font-size:13.5px;font-weight:800;text-decoration:none;transition:all .2s;display:inline-block;border:2px solid var(--blue)}
+.btn-blue:hover{background:var(--sky);border-color:var(--sky);transform:translateY(-2px)}
+
+/* ── ABOUT ── */
+.about{background:var(--blue)}
+.about-in{display:grid;grid-template-columns:1fr 1fr;gap:72px;align-items:center}
+.about .eyebrow{color:rgba(200,241,53,.65)}
+.about .sec-h{color:#fff}
+.about-p{font-size:15.5px;line-height:1.8;color:rgba(255,255,255,.5);margin-bottom:22px}
+.about-vals{display:flex;flex-direction:column;gap:14px;margin-top:28px}
+.av{display:flex;gap:14px;align-items:flex-start;padding:18px;background:rgba(255,255,255,.04);border-radius:10px;border:1px solid rgba(255,255,255,.07);transition:border-color .2s}
+.av:hover{border-color:rgba(200,241,53,.28)}
+.av-icon{font-size:22px;flex-shrink:0;margin-top:2px}
+.av-t{font-size:14px;font-weight:800;color:#fff;margin-bottom:3px}
+.av-d{font-size:12.5px;line-height:1.6;color:rgba(255,255,255,.4)}
+.aright{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.astat{padding:24px;border-radius:14px;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);text-align:center}
+.astat:first-child{grid-column:span 2;background:rgba(200,241,53,.07);border-color:rgba(200,241,53,.18)}
+.astat-v{font-family:'Instrument Serif',serif;font-size:40px;color:var(--lime);line-height:1;margin-bottom:5px}
+.astat-l{font-size:11px;font-weight:700;color:rgba(255,255,255,.35);text-transform:uppercase;letter-spacing:.9px}
+
+/* ── SERVICES ── */
+.svc-header{display:grid;grid-template-columns:1fr 1fr;gap:52px;align-items:center;margin-bottom:60px}
+.svc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.svc-card{padding:32px 26px;border-radius:16px;background:var(--off);border:2px solid transparent;transition:all .32s;position:relative;overflow:hidden}
+.svc-card::after{content:'';position:absolute;bottom:0;left:0;right:0;height:3px;transform:scaleX(0);transform-origin:left;transition:transform .32s}
+.svc-card:hover{border-color:var(--border);transform:translateY(-5px);box-shadow:0 18px 48px rgba(12,17,23,.07)}
+.svc-card:hover::after{transform:scaleX(1)}
+.sc1::after{background:var(--lime)}.sc2::after{background:var(--sky)}.sc3::after{background:var(--mint)}
+.sc4::after{background:var(--purple)}.sc5::after{background:var(--orange)}.sc6::after{background:var(--red)}
+.svc-ico{width:48px;height:48px;border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:22px;margin-bottom:18px}
+.si1{background:rgba(200,241,53,.12)}.si2{background:rgba(26,107,255,.1)}.si3{background:rgba(0,201,138,.1)}
+.si4{background:rgba(124,58,237,.1)}.si5{background:rgba(234,108,30,.1)}.si6{background:rgba(220,38,38,.1)}
+.svc-h{font-size:17px;font-weight:800;color:var(--ink);margin-bottom:9px}
+.svc-p{font-size:13px;line-height:1.75;color:var(--muted)}
+.svc-tags{display:flex;flex-wrap:wrap;gap:5px;margin-top:14px}
+.svc-tag{font-size:10px;font-weight:700;background:#fff;color:var(--muted);padding:3px 9px;border-radius:100px;border:1px solid var(--border)}
+
+/* ── CAREER ── */
+.career-sec{background:var(--ink);padding:100px 52px;position:relative;overflow:hidden}
+.career-bg{position:absolute;inset:0;pointer-events:none;background:radial-gradient(ellipse 60% 70% at 100% 50%,rgba(26,107,255,.14) 0%,transparent 60%)}
+.career-in{max-width:1160px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:72px;align-items:start}
+.career-left .eyebrow{color:rgba(200,241,53,.6)}
+.career-left .sec-h{color:#fff}
+.career-desc{font-size:15px;line-height:1.8;color:rgba(255,255,255,.45);margin-bottom:36px}
+.career-tracks{display:flex;flex-direction:column;gap:0;margin-top:36px}
+.ct{display:flex;gap:18px;align-items:flex-start;padding:22px;border-bottom:1px solid rgba(255,255,255,.06);transition:background .18s;border-radius:10px}
+.ct:last-child{border-bottom:none}
+.ct:hover{background:rgba(255,255,255,.04)}
+.ct-n{font-family:'Instrument Serif',serif;font-size:32px;color:var(--lime);opacity:.35;flex-shrink:0;line-height:1;width:32px}
+.ct-h{font-size:15px;font-weight:800;color:#fff;margin-bottom:5px}
+.ct-p{font-size:12.5px;line-height:1.7;color:rgba(255,255,255,.42)}
+.career-right{display:flex;flex-direction:column;gap:14px}
+.cf{padding:22px;background:rgba(255,255,255,.04);border:1.5px solid rgba(255,255,255,.07);border-radius:12px;transition:border-color .22s}
+.cf:hover{border-color:rgba(26,107,255,.38)}
+.cf-ico{font-size:24px;margin-bottom:10px}
+.cf-h{font-size:14px;font-weight:800;color:#fff;margin-bottom:5px}
+.cf-p{font-size:12.5px;line-height:1.6;color:rgba(255,255,255,.42)}
+
+/* ── HR PACKAGES ── */
+.pkg-tabs{display:flex;gap:7px;margin-bottom:44px;flex-wrap:wrap}
+.pkg-tab{padding:9px 20px;border-radius:100px;font-size:13px;font-weight:700;cursor:pointer;transition:all .18s;border:2px solid var(--border);color:var(--muted);background:#fff;font-family:'Cabinet Grotesk',sans-serif}
+.pkg-tab.active{background:var(--blue);color:#fff;border-color:var(--blue)}
+.pkg-tab:hover:not(.active){border-color:var(--sky);color:var(--sky)}
+.pkg-panels{position:relative}
+.pkg-panel{display:none}
+.pkg-panel.active{display:grid;grid-template-columns:2fr 1.2fr;gap:36px;animation:up .4s ease}
+.pp-main{background:var(--off);border-radius:18px;padding:40px}
+.pp-header{display:flex;align-items:center;gap:14px;margin-bottom:28px;flex-wrap:wrap}
+.pp-badge{padding:5px 14px;border-radius:100px;font-size:11px;font-weight:800;text-transform:uppercase;letter-spacing:1px}
+.pb-bronze{background:rgba(180,100,20,.1);color:#B46414}
+.pb-silver{background:rgba(100,110,130,.1);color:#606878}
+.pb-gold{background:rgba(212,160,23,.1);color:#B8860B}
+.pb-plat{background:rgba(100,60,200,.1);color:#6428C0}
+.pp-price{font-family:'Instrument Serif',serif;font-size:28px;color:var(--ink);line-height:1.1}
+.pp-period{font-size:12.5px;color:var(--muted);margin-bottom:24px;margin-top:4px}
+.pp-desc{font-size:13.5px;line-height:1.75;color:var(--muted);margin-bottom:24px}
+.pp-feats{display:flex;flex-direction:column;gap:9px}
+.pp-feat{display:flex;gap:9px;font-size:13px;color:var(--muted);line-height:1.5}
+.pp-feat::before{content:'✓';color:var(--sky);font-weight:800;flex-shrink:0;margin-top:1px}
+.pp-side{display:flex;flex-direction:column;gap:14px}
+.pp-cta{background:var(--blue);border-radius:14px;padding:28px;text-align:center}
+.pp-cta-h{font-family:'Instrument Serif',serif;font-size:22px;color:#fff;margin-bottom:8px}
+.pp-cta-p{font-size:12.5px;color:rgba(255,255,255,.45);margin-bottom:20px;line-height:1.6}
+.pp-info{background:var(--off);border-radius:12px;padding:22px}
+.pi-h{font-size:13px;font-weight:800;color:var(--ink);margin-bottom:12px}
+.pi-item{display:flex;gap:9px;font-size:12.5px;color:var(--muted);margin-bottom:9px}
+.pi-item::before{content:'→';color:var(--sky);font-weight:700;flex-shrink:0}
+
+/* ── RECRUITMENT ── */
+.recruit{background:var(--sky-pale)}
+.recruit-in{display:grid;grid-template-columns:1fr 1fr;gap:52px;align-items:start}
+.rc-cards{display:flex;flex-direction:column;gap:18px;margin-top:22px}
+.rc-card{background:#fff;border-radius:16px;padding:28px;border:2px solid transparent;transition:all .28s}
+.rc-card:hover{border-color:var(--sky);box-shadow:0 14px 44px rgba(26,107,255,.1)}
+.rc-featured{background:var(--blue);border-color:var(--blue)}
+.rc-badge{display:inline-block;font-size:10px;font-weight:800;text-transform:uppercase;letter-spacing:1px;padding:3px 11px;border-radius:100px;margin-bottom:14px}
+.rb-std{background:rgba(26,107,255,.1);color:var(--sky)}
+.rc-featured .rb-std{background:rgba(200,241,53,.14);color:var(--lime)}
+.rc-h{font-size:18px;font-weight:800;color:var(--ink);margin-bottom:5px}
+.rc-featured .rc-h{color:#fff}
+.rc-price{font-family:'Instrument Serif',serif;font-size:26px;color:var(--sky);margin-bottom:10px}
+.rc-featured .rc-price{color:var(--lime)}
+.rc-p{font-size:12.5px;line-height:1.7;color:var(--muted);margin-bottom:18px}
+.rc-featured .rc-p{color:rgba(255,255,255,.48)}
+.rc-list{display:flex;flex-direction:column;gap:7px;list-style:none}
+.rc-list li{font-size:12.5px;color:var(--muted);display:flex;gap:7px}
+.rc-list li::before{content:'✓';color:var(--sky);font-weight:800;flex-shrink:0}
+.rc-featured .rc-list li{color:rgba(255,255,255,.62)}
+.rc-featured .rc-list li::before{color:var(--lime)}
+.rc-guar{display:inline-flex;align-items:center;gap:5px;margin-top:14px;padding:5px 12px;border-radius:100px;font-size:10.5px;font-weight:700;background:rgba(26,107,255,.08);color:var(--sky)}
+.rc-featured .rc-guar{background:rgba(200,241,53,.1);color:var(--lime)}
+.rr-h{font-family:'Instrument Serif',serif;font-size:30px;color:var(--ink);margin-bottom:14px;line-height:1.2}
+.rr-steps{display:flex;flex-direction:column;gap:0;margin-top:28px}
+.rr-step{display:flex;gap:16px;padding-bottom:24px;position:relative}
+.rr-step:last-child{padding-bottom:0}
+.rr-sl{display:flex;flex-direction:column;align-items:center;gap:0}
+.rr-dot{width:34px;height:34px;border-radius:50%;background:var(--blue);display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:800;color:#fff;flex-shrink:0}
+.rr-line{flex:1;width:2px;background:var(--border);min-height:24px}
+.rr-step:last-child .rr-line{display:none}
+.rr-txt{padding-top:5px}
+.rr-sh{font-size:14px;font-weight:800;color:var(--ink);margin-bottom:3px}
+.rr-sp{font-size:12.5px;line-height:1.6;color:var(--muted)}
+
+/* ── MEDIA & MONETIZE ── */
+.monetize{background:var(--ink);padding:100px 52px}
+.mon-in{max-width:1160px;margin:0 auto}
+.mon-eyebrow{font-size:10.5px;font-weight:800;text-transform:uppercase;letter-spacing:2px;color:rgba(200,241,53,.6);margin-bottom:14px}
+.mon-h{font-family:'Instrument Serif',serif;font-size:clamp(32px,3.8vw,50px);color:#fff;line-height:1.1;margin-bottom:14px}
+.mon-h em{font-style:italic;color:var(--lime)}
+.mon-p{font-size:15px;line-height:1.8;color:rgba(255,255,255,.45);max-width:560px;margin-bottom:48px}
+.mon-tabs{display:flex;gap:7px;margin-bottom:36px;flex-wrap:wrap}
+.mon-tab{padding:9px 18px;border-radius:100px;font-size:12.5px;font-weight:700;cursor:pointer;transition:all .18s;border:1.5px solid rgba(255,255,255,.1);color:rgba(255,255,255,.45);background:transparent;font-family:'Cabinet Grotesk',sans-serif}
+.mon-tab.active{background:var(--lime);color:var(--ink);border-color:var(--lime)}
+.mon-tab:hover:not(.active){border-color:rgba(255,255,255,.3);color:rgba(255,255,255,.8)}
+.mon-panel{display:none}
+.mon-panel.active{display:block;animation:up .35s ease}
+.mon-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.mon-card{background:rgba(255,255,255,.04);border:1.5px solid rgba(255,255,255,.08);border-radius:14px;padding:22px;transition:all .22s}
+.mon-card:hover{border-color:rgba(200,241,53,.22);transform:translateY(-3px)}
+.mon-icon{font-size:22px;margin-bottom:10px}
+.mon-ct{font-size:13.5px;font-weight:800;color:#fff;margin-bottom:5px}
+.mon-cp{font-size:12px;line-height:1.65;color:rgba(255,255,255,.42);margin-bottom:10px}
+.mon-price{font-size:12px;font-weight:700;color:var(--lime);background:rgba(200,241,53,.1);padding:3px 10px;border-radius:20px;display:inline-block}
+.rate-table{width:100%;border-collapse:collapse}
+.rate-table th{text-align:left;padding:9px 14px;font-size:10.5px;font-weight:700;text-transform:uppercase;letter-spacing:.7px;color:rgba(255,255,255,.35);border-bottom:1px solid rgba(255,255,255,.08);background:rgba(255,255,255,.03)}
+.rate-table td{padding:11px 14px;border-bottom:1px solid rgba(255,255,255,.05);font-size:13px;vertical-align:top;line-height:1.5;color:rgba(255,255,255,.65)}
+.rate-table tr:last-child td{border-bottom:none}
+.rate-table tr:hover td{background:rgba(255,255,255,.03)}
+.rate-price{font-weight:700;color:var(--lime);white-space:nowrap}
+.rate-ch{display:inline-block;font-size:10px;font-weight:700;padding:2px 8px;border-radius:20px;margin:2px 2px 0 0}
+.rc-wa{background:rgba(0,201,138,.15);color:var(--mint)}
+.rc-nl{background:rgba(240,165,0,.15);color:var(--amber)}
+.rc-sm{background:rgba(233,30,140,.1);color:#E91E8C}
+.rc-all{background:rgba(255,255,255,.08);color:rgba(255,255,255,.55)}
+.roadmap-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.rm-card{border-radius:12px;padding:20px;border:1px solid rgba(255,255,255,.08)}
+.rm-phase{font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:rgba(255,255,255,.35);margin-bottom:5px}
+.rm-title{font-size:14px;font-weight:800;color:#fff;margin-bottom:3px}
+.rm-rev{font-size:13px;font-weight:700;color:var(--mint);margin-bottom:12px}
+.rm-list{list-style:none;display:flex;flex-direction:column;gap:5px}
+.rm-list li{font-size:11.5px;color:rgba(255,255,255,.45);display:flex;gap:6px;line-height:1.4}
+.rm-list li::before{content:'→';color:rgba(255,255,255,.25);flex-shrink:0}
+
+/* ── EXISTING HR SUPPORT ── */
+.existing-sec{background:var(--warm);padding:90px 52px}
+.exist-in{max-width:1160px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:72px;align-items:center}
+.ex-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.ex-item{padding:22px;background:#fff;border-radius:12px;border-left:4px solid var(--sky);transition:all .25s}
+.ex-item:hover{transform:translateX(4px);box-shadow:0 8px 24px rgba(26,107,255,.08)}
+.ex-ico{font-size:22px;margin-bottom:9px}
+.ex-h{font-size:13.5px;font-weight:800;color:var(--ink);margin-bottom:3px}
+.ex-p{font-size:12px;line-height:1.6;color:var(--muted)}
+
+/* ── TESTIMONIALS ── */
+.proof{background:var(--blue);padding:100px 52px}
+.proof-inner{max-width:1160px;margin:0 auto;text-align:center}
+.proof .eyebrow{color:rgba(200,241,53,.55)}
+.proof .sec-h{color:#fff}
+.proof-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:52px}
+.proof-card{background:rgba(255,255,255,.05);border:1.5px solid rgba(255,255,255,.08);border-radius:16px;padding:28px;text-align:left;transition:all .28s}
+.proof-card:hover{border-color:rgba(200,241,53,.22);transform:translateY(-4px)}
+.proof-stars{color:var(--lime);font-size:13px;letter-spacing:2px;margin-bottom:14px}
+.proof-q{font-family:'Instrument Serif',serif;font-size:16px;font-style:italic;color:#fff;line-height:1.65;margin-bottom:22px}
+.proof-auth{display:flex;align-items:center;gap:11px}
+.proof-av{width:38px;height:38px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:13px;color:#fff;flex-shrink:0}
+.pa-a{background:linear-gradient(135deg,#0A2540,#1A6BFF)}
+.pa-b{background:linear-gradient(135deg,#1B4D3E,#2A7A5E)}
+.pa-c{background:linear-gradient(135deg,#5A1B6B,#A855F7)}
+.proof-n{font-size:13.5px;font-weight:800;color:#fff}
+.proof-r{font-size:11px;color:rgba(255,255,255,.3)}
+
+/* ── PRICING OVERVIEW ── */
+.pricing{background:var(--off);padding:100px 52px}
+.p-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:48px}
+.p-card{background:#fff;border-radius:16px;padding:28px 22px;border:2px solid transparent;transition:all .28s;position:relative}
+.p-card:hover{border-color:var(--border);transform:translateY(-4px);box-shadow:0 16px 40px rgba(12,17,23,.07)}
+.p-feat-card{background:var(--blue)}
+.p-feat-card:hover{transform:translateY(-4px)}
+.p-best{position:absolute;top:-11px;left:50%;transform:translateX(-50%);background:var(--lime);color:var(--ink);font-size:9.5px;font-weight:800;text-transform:uppercase;letter-spacing:1px;padding:3px 13px;border-radius:100px;white-space:nowrap}
+.p-tier{font-size:10px;font-weight:800;text-transform:uppercase;letter-spacing:1.5px;margin-bottom:10px;color:var(--sky)}
+.p-feat-card .p-tier{color:rgba(200,241,53,.65)}
+.p-name{font-family:'Instrument Serif',serif;font-size:26px;color:var(--ink);margin-bottom:3px}
+.p-feat-card .p-name{color:#fff}
+.p-period{font-size:11.5px;color:var(--muted);margin-bottom:22px}
+.p-feat-card .p-period{color:rgba(255,255,255,.3)}
+.p-feats{display:flex;flex-direction:column;gap:7px;margin-bottom:24px}
+.p-feat{font-size:12px;color:var(--muted);display:flex;gap:7px}
+.p-feat-card .p-feat{color:rgba(255,255,255,.52)}
+.p-feat::before{content:'✓';color:var(--sky);font-weight:800;flex-shrink:0}
+.p-feat-card .p-feat::before{color:var(--lime)}
+.p-btn{width:100%;padding:11px;border-radius:7px;font-size:12.5px;font-weight:800;cursor:pointer;border:2px solid;transition:all .18s;font-family:'Cabinet Grotesk',sans-serif;text-align:center;display:block;text-decoration:none}
+.pb-o{background:transparent;color:var(--ink);border-color:var(--border)}.pb-o:hover{border-color:var(--sky);color:var(--sky)}
+.pb-s{background:var(--lime);color:var(--ink);border-color:var(--lime)}.pb-s:hover{background:var(--lime-d)}
+
+/* ── FAQ ── */
+.faq{background:#fff;padding:90px 52px}
+.faq-inner{max-width:780px;margin:0 auto}
+.faq-list{margin-top:44px}
+.faq-item{border-bottom:1.5px solid var(--border)}
+.faq-q{display:flex;justify-content:space-between;align-items:center;padding:20px 0;cursor:pointer;font-size:15px;font-weight:700;color:var(--ink);transition:color .18s;user-select:none;gap:16px}
+.faq-q:hover{color:var(--sky)}
+.faq-tog{width:26px;height:26px;border-radius:50%;border:1.5px solid var(--border);display:flex;align-items:center;justify-content:center;font-size:15px;color:var(--muted);flex-shrink:0;transition:all .28s}
+.faq-item.open .faq-tog{background:var(--sky);border-color:var(--sky);color:#fff;transform:rotate(45deg)}
+.faq-a{max-height:0;overflow:hidden;transition:max-height .4s ease;font-size:13.5px;line-height:1.8;color:var(--muted)}
+.faq-a-in{padding-bottom:18px}
+.faq-item.open .faq-a{max-height:300px}
+
+/* ── CTA ── */
+.cta-sec{background:var(--lime);padding:110px 52px;text-align:center;position:relative;overflow:hidden}
+.cta-sec::before{content:'GROW';position:absolute;bottom:-50px;left:50%;transform:translateX(-50%);font-family:'Instrument Serif',serif;font-size:220px;color:rgba(12,17,23,.05);white-space:nowrap;letter-spacing:-8px;pointer-events:none}
+.cta-sec .sec-h{color:var(--ink)}
+.cta-sec .sec-p{color:rgba(12,17,23,.58);margin:0 auto 40px}
+.cta-btns{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;position:relative}
+.cta-dk{background:var(--ink);color:#fff;padding:16px 40px;border-radius:7px;font-size:14.5px;font-weight:800;text-decoration:none;transition:all .22s;border:2px solid var(--ink);display:inline-block}
+.cta-dk:hover{background:var(--blue);border-color:var(--blue);transform:translateY(-2px)}
+.cta-o{background:transparent;color:rgba(12,17,23,.55);padding:16px 40px;border-radius:7px;font-size:14.5px;font-weight:700;text-decoration:none;transition:all .22s;border:2px solid rgba(12,17,23,.18);display:inline-block}
+.cta-o:hover{border-color:var(--ink);color:var(--ink)}
+
+/* ── FOOTER ── */
+footer{background:var(--ink);padding:64px 52px 36px}
+.ft-top{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:56px;margin-bottom:52px}
+.ft-brand p{font-size:13.5px;line-height:1.75;color:rgba(255,255,255,.32);margin-top:14px;max-width:270px}
+.ft-col h4{font-size:10px;font-weight:800;text-transform:uppercase;letter-spacing:2px;color:rgba(255,255,255,.22);margin-bottom:18px}
+.ft-col a{display:block;font-size:13.5px;color:rgba(255,255,255,.42);text-decoration:none;margin-bottom:9px;transition:color .18s}
+.ft-col a:hover{color:var(--lime)}
+.ft-bot{border-top:1px solid rgba(255,255,255,.07);padding-top:28px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px;font-size:11.5px;color:rgba(255,255,255,.18)}
+
+/* ── RESPONSIVE ── */
+@media(max-width:1100px){
+  .hero,.about-in,.career-in,.recruit-in,.exist-in{grid-template-columns:1fr}
+  .hero-r,.hero-stats{display:none}
+  .svc-grid,.proof-grid,.p-grid{grid-template-columns:1fr 1fr}
+  .aud-inner{grid-template-columns:1fr 1fr}
+  .ft-top{grid-template-columns:1fr 1fr}
+  .sec,.career-sec,.proof,.pricing,.faq,.existing-sec,.monetize,.recruit{padding:72px 24px}
+  nav{padding:0 24px}.nav-links{display:none}
+  .mon-grid,.roadmap-grid{grid-template-columns:1fr 1fr}
+  .pkg-panel.active{grid-template-columns:1fr}
+  .aud-bar{padding:0 24px}
+}
+@media(max-width:640px){
+  .svc-grid,.proof-grid,.p-grid,.aright,.ex-grid,.mon-grid,.roadmap-grid{grid-template-columns:1fr}
+  .aud-inner{grid-template-columns:1fr 1fr}
+  .pkg-panel.active{grid-template-columns:1fr}
+  .hero{padding:110px 24px 72px}
+  .cta-sec{padding:80px 24px}
+  footer{padding:48px 24px 28px}
+  .ft-top{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav id="nav">
+  <a href="#" class="logo">
+    <div class="logo-mark">GZ</div>
+    <div class="logo-text">The <span>GenZ</span> HR</div>
+  </a>
+  <div class="nav-links">
+    <a href="#services">Services</a>
+    <a href="#career">Career</a>
+    <a href="#packages">HR Packages</a>
+    <a href="#recruitment">Recruitment</a>
+    <a href="#media">Media &amp; Ads</a>
+    <a href="#contact">Contact</a>
+  </div>
+  <div class="nav-btns">
+    <a href="tel:+2348168545860" class="btn-ghost">+234 816 854 5860</a>
+    <a href="mailto:contact@thegenzhr.com" class="btn-cta-nav">Get a Proposal →</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero" id="home">
+  <div class="hero-mesh"></div>
+  <div class="hero-grid"></div>
+  <div style="position:relative;z-index:2">
+    <div class="hero-tag"><span class="tag-dot"></span>Nigeria's Premier Career &amp; HR Community</div>
+    <h1 class="hero-h">Your Partner in<br/><em>Growth, People,</em><br/>&amp; Business Success.</h1>
+    <p class="hero-p"><strong>The GenZ HR</strong> supercharges SMEs, professionals, and organisations with strategic consulting across HR, career development, recruitment, media, and beyond — with a community of <strong>106,000+ professionals</strong> behind every service.</p>
+    <div class="hero-acts">
+      <a href="#packages" class="btn-lime">See Our Packages →</a>
+      <a href="#services" class="btn-outline-w">Explore Services</a>
+    </div>
+    <div class="hero-stats">
+      <div><div class="hs-val">106<span>k+</span></div><div class="hs-lbl">Community Reach</div></div>
+      <div><div class="hs-val">100<span>+</span></div><div class="hs-lbl">Clients Served</div></div>
+      <div><div class="hs-val">6</div><div class="hs-lbl">Service Areas</div></div>
+      <div><div class="hs-val">4</div><div class="hs-lbl">Owned Channels</div></div>
+    </div>
+  </div>
+  <div class="hero-r">
+    <div class="hero-float">
+      <div class="hf-val">106k</div>
+      <div class="hf-lbl">Audience &amp;<br/>Growing</div>
+    </div>
+    <div class="hero-card">
+      <div class="hc-title">Everything We Do</div>
+      <div class="hc-svc"><div class="hcs-ico si1">👥</div><div><div class="hcs-n">HR Management &amp; Advisory</div><div class="hcs-d">Your outsourced HR team</div></div></div>
+      <div class="hc-svc"><div class="hcs-ico si2">💼</div><div><div class="hcs-n">Business Consulting</div><div class="hcs-d">Strategy, finance, legal, ops</div></div></div>
+      <div class="hc-svc"><div class="hcs-ico si3">🎯</div><div><div class="hcs-n">Career Consulting</div><div class="hcs-d">For every stage of your career</div></div></div>
+      <div class="hc-svc"><div class="hcs-ico si4">🔍</div><div><div class="hcs-n">Talent Recruitment</div><div class="hcs-d">End-to-end hiring support</div></div></div>
+      <div class="hc-svc" style="background:rgba(200,241,53,.07);border-color:rgba(200,241,53,.2)"><div class="hcs-ico" style="background:rgba(200,241,53,.15)">📡</div><div><div class="hcs-n" style="color:#fff">Media &amp; Sponsorships</div><div class="hcs-d">106k audience for brands</div></div></div>
+      <div class="hc-svc"><div class="hcs-ico si5">⚖️</div><div><div class="hcs-n">Legal &amp; Tax Advisory</div><div class="hcs-d">Stay compliant, stay ahead</div></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- MARQUEE -->
+<div class="marquee">
+  <div class="marquee-track">
+    <span class="marquee-item">HR Management <span class="msep">✦</span></span>
+    <span class="marquee-item">26,000 Newsletter Subscribers <span class="msep">✦</span></span>
+    <span class="marquee-item">Career Consulting <span class="msep">✦</span></span>
+    <span class="marquee-item">26,000 WhatsApp Members <span class="msep">✦</span></span>
+    <span class="marquee-item">Talent Recruitment <span class="msep">✦</span></span>
+    <span class="marquee-item">30,000 Social Followers <span class="msep">✦</span></span>
+    <span class="marquee-item">Business Consulting <span class="msep">✦</span></span>
+    <span class="marquee-item">Media &amp; Sponsorships <span class="msep">✦</span></span>
+    <span class="marquee-item">Legal &amp; Tax Advisory <span class="msep">✦</span></span>
+    <span class="marquee-item">100+ Clients Across Africa <span class="msep">✦</span></span>
+    <span class="marquee-item">HR Management <span class="msep">✦</span></span>
+    <span class="marquee-item">26,000 Newsletter Subscribers <span class="msep">✦</span></span>
+    <span class="marquee-item">Career Consulting <span class="msep">✦</span></span>
+    <span class="marquee-item">26,000 WhatsApp Members <span class="msep">✦</span></span>
+    <span class="marquee-item">Talent Recruitment <span class="msep">✦</span></span>
+    <span class="marquee-item">30,000 Social Followers <span class="msep">✦</span></span>
+    <span class="marquee-item">Business Consulting <span class="msep">✦</span></span>
+    <span class="marquee-item">Media &amp; Sponsorships <span class="msep">✦</span></span>
+    <span class="marquee-item">Legal &amp; Tax Advisory <span class="msep">✦</span></span>
+    <span class="marquee-item">100+ Clients Across Africa <span class="msep">✦</span></span>
+  </div>
+</div>
+
+<!-- AUDIENCE STATS BAR -->
+<div class="aud-bar">
+  <div class="aud-inner">
+    <div class="aud-stat">
+      <div class="aud-n">106<span>k+</span></div>
+      <div class="aud-l">Total Reach</div>
+      <div class="aud-s">Across 4 owned channels<br/>All organic, all opted-in</div>
+    </div>
+    <div class="aud-stat">
+      <div class="aud-n" style="color:var(--mint)">26k</div>
+      <div class="aud-l">WhatsApp Community</div>
+      <div class="aud-s">Direct inbox · no algorithm</div>
+      <div class="aud-badge">85% open rate</div>
+    </div>
+    <div class="aud-stat">
+      <div class="aud-n" style="color:var(--amber)">26k</div>
+      <div class="aud-l">Newsletter</div>
+      <div class="aud-s">The GenZ HR Brief · weekly</div>
+      <div class="aud-badge">44% open rate</div>
+    </div>
+    <div class="aud-stat">
+      <div class="aud-n" style="color:#E91E8C">30k</div>
+      <div class="aud-l">Social Media</div>
+      <div class="aud-s">Instagram, LinkedIn, TikTok, X</div>
+      <div class="aud-badge">5.8% engagement</div>
+    </div>
+    <div class="aud-stat">
+      <div class="aud-n" style="color:var(--sky)">24k</div>
+      <div class="aud-l">Founder's Page</div>
+      <div class="aud-s">Personal brand · highest trust</div>
+      <div class="aud-badge">7.2% engagement</div>
+    </div>
+  </div>
+</div>
+
+<!-- ABOUT -->
+<section class="about sec" id="about">
+  <div class="si">
+    <div class="about-in">
+      <div>
+        <div class="eyebrow">About The GenZ HR</div>
+        <h2 class="sec-h">We're Not Just Consultants.<br/>We're Your <em>Partners.</em></h2>
+        <p class="about-p">The GenZ HR exists to supercharge and empower SMEs, early-stage startups, and ambitious professionals with strategic, adaptable, and cost-effective consulting. We combine a fresh, generational perspective with hard-earned expertise to deliver solutions tailored to your unique challenges — across HR, career, recruitment, and beyond.</p>
+        <p class="about-p">We also run Nigeria's largest HR career community — 106,000+ professionals across four owned channels. That community is not just an audience. It is a talent marketplace, a media platform, and a professional development ecosystem we leverage for every client we work with.</p>
+        <div class="about-vals">
+          <div class="av"><div class="av-icon">💡</div><div><div class="av-t">Community-Backed Everything</div><div class="av-d">106k HR professionals follow us. Every service is amplified by a community that trusts us — making recruitment faster, employer branding more powerful, and career coaching more credible.</div></div></div>
+          <div class="av"><div class="av-icon">⚡</div><div><div class="av-t">Fully Remote, Always On</div><div class="av-d">Enterprise-grade HR and consulting delivered digitally. You get dedicated support without the overhead of a full-time in-house team.</div></div></div>
+          <div class="av"><div class="av-icon">🤝</div><div><div class="av-t">Long-Term Partnership</div><div class="av-d">We don't solve problems and disappear. We grow alongside our clients — from first hire to fully mature people function, from fresh graduate to corner office.</div></div></div>
+        </div>
+      </div>
+      <div class="aright">
+        <div class="astat"><div class="astat-v">106k</div><div class="astat-l">Community Members Across 4 Channels</div></div>
+        <div class="astat"><div class="astat-v">100+</div><div class="astat-l">Clients Served Across Africa</div></div>
+        <div class="astat"><div class="astat-v">6+</div><div class="astat-l">Consulting Domains</div></div>
+        <div class="astat"><div class="astat-v">Full</div><div class="astat-l">Remote Delivery</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section class="sec" id="services">
+  <div class="si">
+    <div class="svc-header">
+      <div>
+        <div class="eyebrow">What We Do</div>
+        <h2 class="sec-h">A Full Suite of Consulting<br/><em>Under One Roof.</em></h2>
+      </div>
+      <p class="sec-p">We're not just an HR firm. We provide the full spectrum of consulting that growing businesses actually need — from people operations to legal compliance to media strategy. One partner. Everything covered.</p>
+    </div>
+    <div class="svc-grid">
+      <div class="svc-card sc1">
+        <div class="svc-ico si1">👥</div>
+        <h3 class="svc-h">HR Management &amp; Advisory</h3>
+        <p class="svc-p">We become your HR department — managing people operations, compliance, payroll, policies, and performance. Fully remote, fully comprehensive.</p>
+        <div class="svc-tags"><span class="svc-tag">Payroll</span><span class="svc-tag">Compliance</span><span class="svc-tag">Policy</span><span class="svc-tag">Performance</span></div>
+      </div>
+      <div class="svc-card sc2">
+        <div class="svc-ico si2">💼</div>
+        <h3 class="svc-h">Business Strategy &amp; Operations</h3>
+        <p class="svc-p">Strategic planning, operational efficiency, SOP development, and process optimisation to help your business run smoother and scale faster.</p>
+        <div class="svc-tags"><span class="svc-tag">Strategy</span><span class="svc-tag">Operations</span><span class="svc-tag">SOPs</span><span class="svc-tag">Scaling</span></div>
+      </div>
+      <div class="svc-card sc3">
+        <div class="svc-ico si3">📡</div>
+        <h3 class="svc-h">Media, Community &amp; Sponsorships</h3>
+        <p class="svc-p">106,000 engaged professionals across 4 owned channels. Direct access to Nigeria's most active career community through newsletters, WhatsApp broadcasts, and employer branding campaigns.</p>
+        <div class="svc-tags"><span class="svc-tag">Newsletters</span><span class="svc-tag">WhatsApp</span><span class="svc-tag">Employer Brand</span><span class="svc-tag">Recruitment Ads</span></div>
+      </div>
+      <div class="svc-card sc4">
+        <div class="svc-ico si4">⚖️</div>
+        <h3 class="svc-h">Legal &amp; Tax Advisory</h3>
+        <p class="svc-p">Labour law compliance, contract reviews, employment documentation, and regulatory guidance — ensuring your business operates within the law at all times.</p>
+        <div class="svc-tags"><span class="svc-tag">Labour Law</span><span class="svc-tag">Contracts</span><span class="svc-tag">Tax</span><span class="svc-tag">Compliance</span></div>
+      </div>
+      <div class="svc-card sc5">
+        <div class="svc-ico si5">📣</div>
+        <h3 class="svc-h">Marketing &amp; Brand Strategy</h3>
+        <p class="svc-p">Go-to-market strategy, brand positioning, digital marketing advisory, and employer branding to attract customers and top talent alike.</p>
+        <div class="svc-tags"><span class="svc-tag">GTM</span><span class="svc-tag">Branding</span><span class="svc-tag">Digital</span><span class="svc-tag">Employer Brand</span></div>
+      </div>
+      <div class="svc-card sc6">
+        <div class="svc-ico si6">💰</div>
+        <h3 class="svc-h">Finance &amp; Investment Advisory</h3>
+        <p class="svc-p">Financial planning, budgeting, tax compliance, and advisory services to protect your bottom line and stay ahead of regulatory obligations.</p>
+        <div class="svc-tags"><span class="svc-tag">Budgeting</span><span class="svc-tag">Tax</span><span class="svc-tag">Finance</span><span class="svc-tag">Compliance</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CAREER CONSULTING -->
+<section class="career-sec" id="career">
+  <div class="career-bg"></div>
+  <div class="career-in" style="max-width:1160px;margin:0 auto">
+    <div class="career-left">
+      <div class="eyebrow">Career Consulting</div>
+      <h2 class="sec-h" style="color:#fff">We Help People Build<br/>Careers They're<br/><em>Proud Of.</em></h2>
+      <p class="career-desc">Whether you're just starting out or navigating a critical turning point — we provide clarity, a roadmap, and coaching to move with purpose. With 106,000 people in our community, we know exactly what's working in the Nigerian job market right now.</p>
+      <a href="mailto:contact@thegenzhr.com" class="btn-lime" style="margin-bottom:36px;display:inline-block">Book a Career Session →</a>
+      <div class="career-tracks">
+        <div class="ct"><div class="ct-n">01</div><div><div class="ct-h">Young Professionals &amp; Gen Z</div><div class="ct-p">Career clarity, CV and LinkedIn optimisation, job search strategy, interview coaching, salary negotiation — everything you need to land the role and grow into it.</div></div></div>
+        <div class="ct"><div class="ct-n">02</div><div><div class="ct-h">Mid-Career Professionals</div><div class="ct-p">Strategic repositioning, personal branding, navigating pivots, industry transitions, and finding your next step with confidence and a clear plan.</div></div></div>
+        <div class="ct"><div class="ct-n">03</div><div><div class="ct-h">Senior Professionals &amp; Executives</div><div class="ct-p">Executive positioning, promotion strategy, leadership brand development, and scaling your influence and impact at the highest levels.</div></div></div>
+      </div>
+    </div>
+    <div class="career-right">
+      <div class="cf"><div class="cf-ico">🗺️</div><h3 class="cf-h">Career Roadmapping</h3><p class="cf-p">A clear, personalised 12–24 month career roadmap built around your goals, strengths, and the actual realities of your industry and market.</p></div>
+      <div class="cf"><div class="cf-ico">💬</div><h3 class="cf-h">1-on-1 Coaching Sessions</h3><p class="cf-p">Dedicated sessions with an experienced career consultant who understands the Nigerian and African professional landscape — not imported career advice that doesn't fit.</p></div>
+      <div class="cf"><div class="cf-ico">📄</div><h3 class="cf-h">CV, LinkedIn &amp; Portfolio Rewrite</h3><p class="cf-p">Complete overhaul of your professional documents and online presence to stand out to the right opportunities. ATS-optimised, voice-matched, recruiter-tested.</p></div>
+      <div class="cf"><div class="cf-ico">🎯</div><h3 class="cf-h">Job Search &amp; Interview Prep</h3><p class="cf-p">Strategic job search planning, application coaching, and rigorous mock interview preparation to maximise your conversion rate from application to offer.</p></div>
+      <div class="cf"><div class="cf-ico">📈</div><h3 class="cf-h">Salary Negotiation Coaching</h3><p class="cf-p">Market rate research, word-for-word negotiation scripts, and post-offer support. If this session gets you &#8358;30k more per month, it pays back 24× in year one.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- HR PACKAGES -->
+<section class="sec" id="packages">
+  <div class="si">
+    <div style="margin-bottom:36px">
+      <div class="eyebrow">HR Management Packages</div>
+      <h2 class="sec-h">Choose Your Level of<br/><em>HR Partnership.</em></h2>
+      <p class="sec-p">Subscription-based, remote, and designed for African SMEs and startups. From essential HR foundations to a fully embedded people function.</p>
+    </div>
+    <div class="pkg-tabs">
+      <button class="pkg-tab active" onclick="switchPkg('bronze',this)">🥉 Bronze — Essential</button>
+      <button class="pkg-tab" onclick="switchPkg('silver',this)">🥈 Silver — Strategic</button>
+      <button class="pkg-tab" onclick="switchPkg('gold',this)">🥇 Gold — Embedded</button>
+      <button class="pkg-tab" onclick="switchPkg('platinum',this)">💎 Platinum — Complete</button>
+    </div>
+    <div class="pkg-panels">
+      <div class="pkg-panel active" id="pkg-bronze">
+        <div class="pp-main">
+          <div class="pp-header">
+            <span class="pp-badge pb-bronze">🥉 Bronze</span>
+            <div><div class="pp-price">Essential HR Foundations</div><div class="pp-period">Monthly · Best for very early-stage startups</div></div>
+          </div>
+          <p class="pp-desc">Everything you need to get your HR house in order — from audit to compliance, payroll to onboarding. A complete HR foundation for lean teams building fast.</p>
+          <div class="pp-feats">
+            <div class="pp-feat">HR Audit — evaluate current practices and identify risks</div>
+            <div class="pp-feat">HR Advisory — 5 hours/week of dedicated expert support</div>
+            <div class="pp-feat">HR Compliance Management — taxes, pensions, insurance, statutory requirements</div>
+            <div class="pp-feat">Payroll Management — error-free monthly salary disbursement</div>
+            <div class="pp-feat">Labour Law Advisory — all HR documents reviewed and aligned</div>
+            <div class="pp-feat">Medical Insurance Management (HMO)</div>
+            <div class="pp-feat">Policy Development — tailored Employee Handbook</div>
+            <div class="pp-feat">Recruitment Process Management — 2 hires per quarter</div>
+            <div class="pp-feat">Employee Onboarding — seamless new hire integration</div>
+            <div class="pp-feat">Document Review — offer letters, contracts, employment records</div>
+          </div>
+        </div>
+        <div class="pp-side">
+          <div class="pp-cta">
+            <div class="pp-cta-h">Start with Bronze</div>
+            <p class="pp-cta-p">Get your HR foundations right from day one.</p>
+            <a href="mailto:contact@thegenzhr.com" class="btn-lime" style="display:block;text-align:center;padding:13px">Request Proposal →</a>
+          </div>
+          <div class="pp-info">
+            <div class="pi-h">Also Included</div>
+            <div class="pi-item">Fully remote delivery</div>
+            <div class="pi-item">Dedicated WhatsApp support line</div>
+            <div class="pi-item">Monthly HR report to leadership</div>
+            <div class="pi-item">Scalable — upgrade anytime</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="pkg-panel" id="pkg-silver">
+        <div class="pp-main">
+          <div class="pp-header">
+            <span class="pp-badge pb-silver">🥈 Silver</span>
+            <div><div class="pp-price">Strategic HR Partner</div><div class="pp-period">Monthly · Best for growing teams of 10–40</div></div>
+          </div>
+          <p class="pp-desc">Everything in Bronze, plus dedicated strategy support, performance management, and expanded advisory. For businesses that are scaling and need HR to lead from the front.</p>
+          <div class="pp-feats">
+            <div class="pp-feat">Everything in Bronze</div>
+            <div class="pp-feat">Dedicated HR Advisory — 10 hours/week</div>
+            <div class="pp-feat">HR Strategy Development and Review</div>
+            <div class="pp-feat">Performance Management System Design — KPIs, reviews, appraisals</div>
+            <div class="pp-feat">Recruitment Process Management — 4 hires per quarter</div>
+            <div class="pp-feat">Organisational Plan Review — annual and biannual</div>
+            <div class="pp-feat">Policy Development — up to 3 policies per quarter</div>
+            <div class="pp-feat">Dedicated Account Manager — one point of contact</div>
+            <div class="pp-feat">KPI Facilitation for Employees</div>
+            <div class="pp-feat">Employee Compensation and Benefits Strategy</div>
+          </div>
+        </div>
+        <div class="pp-side">
+          <div class="pp-cta">
+            <div class="pp-cta-h">Upgrade to Silver</div>
+            <p class="pp-cta-p">HR that actively drives your business strategy.</p>
+            <a href="mailto:contact@thegenzhr.com" class="btn-lime" style="display:block;text-align:center;padding:13px">Request Proposal →</a>
+          </div>
+          <div class="pp-info">
+            <div class="pi-h">Added in Silver</div>
+            <div class="pi-item">Dedicated Account Manager</div>
+            <div class="pi-item">HR Strategy documentation</div>
+            <div class="pi-item">Performance framework design</div>
+            <div class="pi-item">Comp &amp; benefits advisory</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="pkg-panel" id="pkg-gold">
+        <div class="pp-main">
+          <div class="pp-header">
+            <span class="pp-badge pb-gold">🥇 Gold</span>
+            <div><div class="pp-price">Embedded HR Leadership</div><div class="pp-period">Monthly · Best for teams of 40–100</div></div>
+          </div>
+          <p class="pp-desc">Everything in Silver plus unlimited advisory, a dedicated on-site HR professional, executive coaching, and a fully managed people function.</p>
+          <div class="pp-feats">
+            <div class="pp-feat">Everything in Silver</div>
+            <div class="pp-feat">Unlimited HR Advisory — any question, any time</div>
+            <div class="pp-feat">Recruitment — up to 5 per quarter</div>
+            <div class="pp-feat">Policy Development — up to 4 policies per quarter</div>
+            <div class="pp-feat">Executive Coaching — 1 session every 3 months</div>
+            <div class="pp-feat">Strategy Planning Facilitation — 1 annual session</div>
+            <div class="pp-feat">Quarterly Organisational Plan Review</div>
+            <div class="pp-feat">Probation Period Review</div>
+            <div class="pp-feat">Dedicated Sit-in HR Professional</div>
+          </div>
+        </div>
+        <div class="pp-side">
+          <div class="pp-cta" style="background:linear-gradient(135deg,var(--blue),#0E3A62)">
+            <div class="pp-cta-h">Go Gold</div>
+            <p class="pp-cta-p">Our most popular package for companies serious about people as a competitive advantage.</p>
+            <a href="mailto:contact@thegenzhr.com" class="btn-lime" style="display:block;text-align:center;padding:13px">Get a Quote →</a>
+          </div>
+          <div class="pp-info">
+            <div class="pi-h">Gold Only Features</div>
+            <div class="pi-item">Unlimited advisory access</div>
+            <div class="pi-item">Sit-in HR professional</div>
+            <div class="pi-item">Executive coaching included</div>
+            <div class="pi-item">Annual strategy session</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="pkg-panel" id="pkg-platinum">
+        <div class="pp-main">
+          <div class="pp-header">
+            <span class="pp-badge pb-plat">💎 Platinum</span>
+            <div><div class="pp-price">Full-Service People Partner</div><div class="pp-period">Monthly · For scaling organisations 100+</div></div>
+          </div>
+          <p class="pp-desc">Everything in Gold plus comprehensive engagement management, soft skills training, organisational restructuring, monthly coaching, and end-to-end performance management.</p>
+          <div class="pp-feats">
+            <div class="pp-feat">Everything in Gold</div>
+            <div class="pp-feat">Employee Engagement Management — events, pulse surveys, forums (biannually)</div>
+            <div class="pp-feat">Strategic Planning Facilitation — 2 annual sessions</div>
+            <div class="pp-feat">Recruitment — up to 7 cycles per quarter</div>
+            <div class="pp-feat">Policy Development — up to 6 policies per quarter</div>
+            <div class="pp-feat">Outplacement Services — exit management &amp; career transition support</div>
+            <div class="pp-feat">Monthly Coaching — leadership development for 1 manager/month</div>
+            <div class="pp-feat">Full Performance Management — goal-setting, mid-year and annual reviews</div>
+            <div class="pp-feat">Monthly Soft Skills Training for all employees</div>
+            <div class="pp-feat">Organisational Restructuring — grade structure, pay bands, job evaluations</div>
+          </div>
+        </div>
+        <div class="pp-side">
+          <div class="pp-cta" style="background:linear-gradient(135deg,#3A1060,#7C3AED)">
+            <div class="pp-cta-h">Go Platinum</div>
+            <p class="pp-cta-p">HR as a true engine of growth. Let's build it together.</p>
+            <a href="mailto:contact@thegenzhr.com" class="btn-lime" style="display:block;text-align:center;padding:13px">Talk to Us →</a>
+          </div>
+          <div class="pp-info">
+            <div class="pi-h">Platinum Only</div>
+            <div class="pi-item">Monthly coaching &amp; training</div>
+            <div class="pi-item">Full org restructuring support</div>
+            <div class="pi-item">Outplacement services</div>
+            <div class="pi-item">7 recruitments per quarter</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- RECRUITMENT -->
+<section class="recruit sec" id="recruitment">
+  <div class="si">
+    <div class="recruit-in">
+      <div>
+        <div class="eyebrow">Recruitment Services</div>
+        <h2 class="sec-h">We Find the Right<br/>People. <em>Every Time.</em></h2>
+        <p class="sec-p" style="margin-bottom:32px">End-to-end talent acquisition backed by a 26,000-person job-seeker community. We don't flood you with CVs — we bring you the right person, verified, and fast.</p>
+        <a href="mailto:contact@thegenzhr.com" class="btn-blue">Start a Search →</a>
+        <div class="rc-cards">
+          <div class="rc-card rc-featured">
+            <div class="rc-badge rb-std">Full-Cycle Recruitment</div>
+            <div class="rc-h">End-to-End Hiring</div>
+            <div class="rc-price">10% of Annual Gross Salary</div>
+            <p class="rc-p">We handle everything from job brief to first day — sourcing from our 26k community plus wider networks. You focus on your business, we bring you the right person.</p>
+            <ul class="rc-list">
+              <li>Job brief and JD rewrite</li>
+              <li>Multi-channel sourcing incl. 26k community</li>
+              <li>Screening and first-round interviews</li>
+              <li>Shortlisted candidates presented with notes</li>
+              <li>Client interview coordination and offer management</li>
+              <li>Onboarding coordination</li>
+              <li>1-month post-onboarding support</li>
+            </ul>
+            <div class="rc-guar">🛡 60-day replacement guarantee</div>
+          </div>
+          <div class="rc-card">
+            <div class="rc-badge rb-std">Sourcing + Shortlist</div>
+            <div class="rc-h">Hiring-Only Service</div>
+            <div class="rc-price" style="color:var(--blue)">&#8358;200,000 flat per hire</div>
+            <p class="rc-p">We source and shortlist. You run your own interviews and make the final call. Fast, affordable, drawing from our engaged community.</p>
+            <ul class="rc-list">
+              <li>Role posting across all channels</li>
+              <li>Community-sourced candidate pool</li>
+              <li>Shortlisting — top 3–6 CVs presented</li>
+              <li>First-level interview screening</li>
+              <li>1-month post-hire check-in</li>
+            </ul>
+            <div class="rc-guar" style="background:rgba(26,107,255,.08);color:var(--sky)">🛡 30-day replacement guarantee</div>
+          </div>
+        </div>
+      </div>
+      <div style="padding-top:16px">
+        <div class="eyebrow">How We Recruit</div>
+        <h3 class="rr-h">Our End-to-End<br/>Recruitment Process</h3>
+        <p style="font-size:14px;color:var(--muted);line-height:1.8;margin-bottom:0">Built around quality, speed, and fit. We draw from Nigeria's largest active career community — 26,000 job seekers ready to hear about your role today.</p>
+        <div class="rr-steps">
+          <div class="rr-step"><div class="rr-sl"><div class="rr-dot">1</div><div class="rr-line"></div></div><div class="rr-txt"><div class="rr-sh">Brief &amp; JD Development</div><p class="rr-sp">We understand the role deeply — culture, team dynamics, what great actually looks like for you.</p></div></div>
+          <div class="rr-step"><div class="rr-sl"><div class="rr-dot">2</div><div class="rr-line"></div></div><div class="rr-txt"><div class="rr-sh">Community + Multi-Channel Sourcing</div><p class="rr-sp">Active outreach to our 26k WhatsApp community plus LinkedIn, job boards, and professional networks.</p></div></div>
+          <div class="rr-step"><div class="rr-sl"><div class="rr-dot">3</div><div class="rr-line"></div></div><div class="rr-txt"><div class="rr-sh">Screening &amp; First Interviews</div><p class="rr-sp">Rigorous screening, competency-based assessments, and first-round interviews on your behalf.</p></div></div>
+          <div class="rr-step"><div class="rr-sl"><div class="rr-dot">4</div><div class="rr-line"></div></div><div class="rr-txt"><div class="rr-sh">Shortlist Presentation</div><p class="rr-sp">Top candidates delivered with detailed profiles, our recommendation, and full interview notes.</p></div></div>
+          <div class="rr-step"><div class="rr-sl"><div class="rr-dot">5</div><div class="rr-line"></div></div><div class="rr-txt"><div class="rr-sh">Offer, Onboarding &amp; Follow-Up</div><p class="rr-sp">Offer management, negotiation support, onboarding coordination, and post-hire check-ins.</p></div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MEDIA & MONETIZE -->
+<section class="monetize" id="media">
+  <div class="mon-in">
+    <div class="mon-eyebrow">Media, Community &amp; Audience Access</div>
+    <h2 class="mon-h">106,000 professionals.<br/><em>Ready for your brand.</em></h2>
+    <p class="mon-p">The GenZ HR is Nigeria's largest HR and career community — fully owned, fully opted-in, algorithm-free. Brands, recruiters, and employers pay to access our audience because there is no comparable channel in Nigeria for this demographic.</p>
+    <div class="mon-tabs">
+      <button class="mon-tab active" onclick="switchMon('b2b',this)">📣 Brand &amp; Sponsor Packages</button>
+      <button class="mon-tab" onclick="switchMon('rates',this)">💰 Rate Card</button>
+      <button class="mon-tab" onclick="switchMon('audience',this)">👥 Audience Profile</button>
+      <button class="mon-tab" onclick="switchMon('roadmap',this)">🚀 Monetization Roadmap</button>
+    </div>
+
+    <div id="mon-b2b" class="mon-panel active">
+      <div class="mon-grid">
+        <div class="mon-card"><div class="mon-icon">📧</div><div class="mon-ct">Newsletter Dedicated Send</div><div class="mon-cp">Your brand owns an entire edition sent to 26,000 opted-in subscribers. 44% open rate. Editorial copy written by our team, you approve before send.</div><span class="mon-price">&#8358;200,000 per send</span></div>
+        <div class="mon-card"><div class="mon-icon">💬</div><div class="mon-ct">WhatsApp Community Broadcast</div><div class="mon-cp">Direct sponsored message to 26,000 active community members. 85% open rate — the highest engagement of any digital channel in Nigeria.</div><span class="mon-price">&#8358;300,000 per broadcast</span></div>
+        <div class="mon-card"><div class="mon-icon">💼</div><div class="mon-ct">Job Listing Blast</div><div class="mon-cp">Your open role sent directly to 26,000 active job seekers via WhatsApp. 50–200 applications arrive within 48 hours.</div><span class="mon-price">&#8358;50,000 per listing</span></div>
+        <div class="mon-card"><div class="mon-icon">📱</div><div class="mon-ct">Social Media Campaign</div><div class="mon-cp">Branded posts, stories, and reels across our 30,000-follower social media presence. 3-post or full-campaign packages available.</div><span class="mon-price">&#8358;120,000 — 3 posts</span></div>
+        <div class="mon-card"><div class="mon-icon">🏢</div><div class="mon-ct">Company Spotlight Feature</div><div class="mon-cp">Editorial deep-dive on your company — culture, values, benefits, open roles. Distributed across all our channels. The definitive employer branding product.</div><span class="mon-price">&#8358;400,000 per feature</span></div>
+        <div class="mon-card"><div class="mon-icon">🌟</div><div class="mon-ct">Monthly Brand Partner</div><div class="mon-cp">Category-exclusive presence across all channels for a full month. Newsletter, WhatsApp, social, events — your brand woven into everything we publish.</div><span class="mon-price">&#8358;1,200,000/month</span></div>
+      </div>
+    </div>
+
+    <div id="mon-rates" class="mon-panel">
+      <table class="rate-table">
+        <thead><tr><th>Placement</th><th>Channel</th><th>Est. Reach</th><th>Rate</th></tr></thead>
+        <tbody>
+          <tr><td><strong>Dedicated newsletter send</strong><br/><span style="font-size:11px;color:rgba(255,255,255,.35)">Your brand owns the full edition — 26,000 subscribers</span></td><td><span class="rate-ch rc-nl">Newsletter</span></td><td>~11,440 opens</td><td class="rate-price">&#8358;200,000</td></tr>
+          <tr><td><strong>Newsletter header placement</strong><br/><span style="font-size:11px;color:rgba(255,255,255,.35)">Logo + copy + CTA — first thing 11k+ openers see</span></td><td><span class="rate-ch rc-nl">Newsletter</span></td><td>~11,440 opens</td><td class="rate-price">&#8358;85,000</td></tr>
+          <tr><td><strong>Newsletter mid-body (native)</strong><br/><span style="font-size:11px;color:rgba(255,255,255,.35)">Reads like editorial content, not advertising</span></td><td><span class="rate-ch rc-nl">Newsletter</span></td><td>~9,200 reach</td><td class="rate-price">&#8358;55,000</td></tr>
+          <tr><td><strong>Newsletter footer listing</strong></td><td><span class="rate-ch rc-nl">Newsletter</span></td><td>~7,000 reach</td><td class="rate-price">&#8358;25,000</td></tr>
+          <tr><td><strong>WhatsApp sponsored broadcast</strong><br/><span style="font-size:11px;color:rgba(255,255,255,.35)">Direct message to 26,000 members — 85% open rate</span></td><td><span class="rate-ch rc-wa">WhatsApp</span></td><td>~22,100 members</td><td class="rate-price">&#8358;300,000</td></tr>
+          <tr><td><strong>WhatsApp job listing blast</strong></td><td><span class="rate-ch rc-wa">WhatsApp</span></td><td>~22,100 members</td><td class="rate-price">&#8358;50,000</td></tr>
+          <tr><td><strong>Social media campaign (3 posts)</strong></td><td><span class="rate-ch rc-sm">Social</span></td><td>~30,000 followers</td><td class="rate-price">&#8358;120,000</td></tr>
+          <tr><td><strong>Founder personal endorsement post</strong><br/><span style="font-size:11px;color:rgba(255,255,255,.35)">Highest trust placement — max 2/month</span></td><td><span class="rate-ch rc-sm">Founder</span></td><td>24,000 followers</td><td class="rate-price">&#8358;250,000</td></tr>
+          <tr><td><strong>Company spotlight (all channels)</strong></td><td><span class="rate-ch rc-all">All channels</span></td><td>Full audience</td><td class="rate-price">&#8358;400,000</td></tr>
+          <tr><td><strong>Virtual event title sponsor</strong></td><td><span class="rate-ch rc-all">All channels</span></td><td>Full audience</td><td class="rate-price">&#8358;350,000</td></tr>
+          <tr><td><strong>Monthly brand partner (category exclusive)</strong></td><td><span class="rate-ch rc-all">All channels</span></td><td>Full audience monthly</td><td class="rate-price">&#8358;1,200,000/mo</td></tr>
+          <tr><td><strong>Annual media partner</strong></td><td><span class="rate-ch rc-all">All channels</span></td><td>Full year</td><td class="rate-price">&#8358;5,000,000/yr</td></tr>
+        </tbody>
+      </table>
+      <p style="font-size:12px;color:rgba(255,255,255,.35);margin-top:14px">All placements include editorial copy written by our team (sponsor approves), post-campaign performance report, and a named account manager. Contact partnerships@thegenzhr.com for custom packages.</p>
+    </div>
+
+    <div id="mon-audience" class="mon-panel">
+      <div class="mon-grid">
+        <div class="mon-card"><div class="mon-icon">📊</div><div class="mon-ct">Age Distribution</div><div class="mon-cp">72% are 22–31 — the peak career-building and financial decision-making demographic in Nigeria.</div><div style="font-size:12px;color:rgba(255,255,255,.55);line-height:1.8">Ages 22–26: <strong style="color:var(--lime)">38%</strong><br/>Ages 27–31: <strong style="color:var(--lime)">34%</strong><br/>Ages 32–36: <strong style="color:var(--lime)">18%</strong><br/>Other ages: <strong style="color:var(--lime)">10%</strong></div></div>
+        <div class="mon-card"><div class="mon-icon">💼</div><div class="mon-ct">Career Stage</div><div class="mon-cp">41% are actively job-seeking right now — the highest-intent moment for product adoption and service conversion.</div><div style="font-size:12px;color:rgba(255,255,255,.55);line-height:1.8">Actively job-seeking: <strong style="color:var(--lime)">41%</strong><br/>Employed, open to move: <strong style="color:var(--lime)">29%</strong><br/>Recently placed (0–12mo): <strong style="color:var(--lime)">16%</strong><br/>Final year students: <strong style="color:var(--lime)">10%</strong></div></div>
+        <div class="mon-card"><div class="mon-icon">📍</div><div class="mon-ct">Location</div><div class="mon-cp">79% are in Nigeria's top 3 commercial cities — ideal for brands with digital or physical presence in Lagos, Abuja, and Port Harcourt.</div><div style="font-size:12px;color:rgba(255,255,255,.55);line-height:1.8">Lagos: <strong style="color:var(--lime)">52%</strong><br/>Abuja: <strong style="color:var(--lime)">18%</strong><br/>Port Harcourt: <strong style="color:var(--lime)">9%</strong><br/>Other cities: <strong style="color:var(--lime)">16%</strong></div></div>
+        <div class="mon-card"><div class="mon-icon">🎓</div><div class="mon-ct">Education</div><div class="mon-cp">80% hold at minimum a bachelor's degree — a highly educated audience with above-average purchasing power.</div><div style="font-size:12px;color:rgba(255,255,255,.55);line-height:1.8">BSc / BA graduate: <strong style="color:var(--lime)">62%</strong><br/>MSc / MBA / Postgrad: <strong style="color:var(--lime)">18%</strong><br/>HND / OND: <strong style="color:var(--lime)">12%</strong><br/>Currently studying: <strong style="color:var(--lime)">8%</strong></div></div>
+        <div class="mon-card"><div class="mon-icon">💰</div><div class="mon-ct">Income &amp; Purchasing Power</div><div class="mon-cp">76% are earning or about to — at the financial inflection point where banking, insurance, and investment products convert at peak rates.</div><div style="font-size:12px;color:rgba(255,255,255,.55);line-height:1.8">&#8358;150k–&#8358;350k/mo: <strong style="color:var(--lime)">34%</strong><br/>&#8358;350k–&#8358;700k/mo: <strong style="color:var(--lime)">28%</strong><br/>&#8358;700k+/mo: <strong style="color:var(--lime)">14%</strong></div></div>
+        <div class="mon-card"><div class="mon-icon">🔥</div><div class="mon-ct">Why Brands Choose Us</div><div class="mon-cp">Our engagement rates are 3–5× industry average. This is not reach — it is a relationship. When we recommend something, our audience acts.</div><div style="font-size:12px;color:rgba(255,255,255,.55);line-height:1.8">WhatsApp open rate: <strong style="color:var(--lime)">85%</strong><br/>Newsletter open rate: <strong style="color:var(--lime)">44%</strong><br/>Social engagement: <strong style="color:var(--lime)">5.8%</strong></div></div>
+      </div>
+    </div>
+
+    <div id="mon-roadmap" class="mon-panel">
+      <p style="font-size:14px;color:rgba(255,255,255,.5);line-height:1.7;max-width:640px;margin-bottom:28px">Our 12-month business monetization roadmap — building from immediate revenue streams to large-scale recurring income, systematically and sustainably.</p>
+      <div class="roadmap-grid">
+        <div class="rm-card" style="background:rgba(255,255,255,.04)"><div class="rm-phase">Month 1–2 · Foundation</div><div class="rm-title">Start Earning Now</div><div class="rm-rev">&#8358;500k–1.5M/mo</div><ul class="rm-list"><li>CV rewrite flash sales</li><li>5 founding coaching clients</li><li>First newsletter sponsorship</li><li>Media kit + B2B outreach</li><li>Paystack payment links live</li></ul></div>
+        <div class="rm-card" style="background:rgba(0,201,138,.06);border-color:rgba(0,201,138,.15)"><div class="rm-phase">Month 3–4 · Products</div><div class="rm-title">Build Passive Income</div><div class="rm-rev">&#8358;1.5M–3.5M/mo</div><ul class="rm-list"><li>Job Search Accelerator course</li><li>Paid WhatsApp membership tier</li><li>Virtual career workshop (200 seats)</li><li>First B2B job listing client</li><li>Monthly salary briefing</li></ul></div>
+        <div class="rm-card" style="background:rgba(26,107,255,.06);border-color:rgba(26,107,255,.15)"><div class="rm-phase">Month 5–8 · B2B Engine</div><div class="rm-title">Scale the Business</div><div class="rm-rev">&#8358;4M–8M/mo</div><ul class="rm-list"><li>3 employer branding clients</li><li>Top Employers annual ranking</li><li>First fractional HR retainer</li><li>Physical career fair + sponsors</li><li>Paid workforce intelligence report</li></ul></div>
+        <div class="rm-card" style="background:rgba(200,241,53,.06);border-color:rgba(200,241,53,.18)"><div class="rm-phase">Month 9–12 · Compounding</div><div class="rm-title">Build Recurring Revenue</div><div class="rm-rev">&#8358;8M–20M/mo</div><ul class="rm-list"><li>Annual media partnerships</li><li>Curriculum licensing to universities</li><li>Graduate salary survey product</li><li>Expand to 5 Nigerian cities</li><li>National talent placement service</li></ul></div>
+      </div>
+      <div style="margin-top:24px;background:rgba(200,241,53,.08);border:1px solid rgba(200,241,53,.2);border-radius:12px;padding:20px 24px">
+        <div style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:1.5px;color:var(--lime);margin-bottom:6px">12-Month Revenue Potential</div>
+        <div style="font-family:'Instrument Serif',serif;font-size:32px;color:#fff">&#8358;60M – &#8358;250M+</div>
+        <div style="font-size:13px;color:rgba(255,255,255,.45);margin-top:4px">Conservative estimate · depends on execution pace and stream prioritisation</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- EXISTING HR TEAM SUPPORT -->
+<section class="existing-sec">
+  <div class="exist-in">
+    <div>
+      <div class="eyebrow">Already Have an HR Team?</div>
+      <h2 class="sec-h">We Work With<br/><em>Your Team,</em><br/>Not Instead of It.</h2>
+      <p class="sec-p" style="margin-bottom:32px">If you already have an HR function but need specialist support for specific projects or strategic gaps, we plug in exactly where you need us — without disrupting what already works.</p>
+      <a href="mailto:contact@thegenzhr.com" class="btn-blue">Let's Talk →</a>
+    </div>
+    <div class="ex-grid">
+      <div class="ex-item"><div class="ex-ico">🔍</div><h4 class="ex-h">HR Audit &amp; Gap Analysis</h4><p class="ex-p">Deep-dive into your existing people processes to uncover risks, gaps, and strategic opportunities.</p></div>
+      <div class="ex-item"><div class="ex-ico">🏗️</div><h4 class="ex-h">Organisational Restructuring</h4><p class="ex-p">Grade structures, pay bands, and org design aligned with your growth stage and people strategy.</p></div>
+      <div class="ex-item"><div class="ex-ico">💡</div><h4 class="ex-h">Employee Engagement Strategy</h4><p class="ex-p">Data-driven strategies to keep your best people engaged and reduce costly attrition.</p></div>
+      <div class="ex-item"><div class="ex-ico">🧠</div><h4 class="ex-h">Competency Model Development</h4><p class="ex-p">Clear frameworks for what excellent performance looks like at every level of your organisation.</p></div>
+      <div class="ex-item"><div class="ex-ico">🎓</div><h4 class="ex-h">Training &amp; Executive Coaching</h4><p class="ex-p">Bespoke training programmes and 1:1 executive coaching for your leadership team.</p></div>
+      <div class="ex-item"><div class="ex-ico">🎯</div><h4 class="ex-h">Recruitment &amp; Personnel Outsourcing</h4><p class="ex-p">Specialist recruitment support for high-volume or senior-level hiring your team needs backup on.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="proof" id="testimonials">
+  <div class="proof-inner">
+    <div class="eyebrow">Client Stories</div>
+    <h2 class="sec-h" style="color:#fff;max-width:580px;margin:0 auto">What Our Clients<br/><em>Say About Working With Us.</em></h2>
+    <div class="proof-grid">
+      <div class="proof-card">
+        <div class="proof-stars">★★★★★</div>
+        <p class="proof-q">"GenZ HR stepped in when we were scaling fast with no HR structure. Within 3 months they had policies, payroll, and a recruitment process running — all remotely. Incredibly professional and genuinely understood our context."</p>
+        <div class="proof-auth"><div class="proof-av pa-a">AO</div><div><div class="proof-n">Adaeze Okonkwo</div><div class="proof-r">CEO · Fintech Startup, Lagos</div></div></div>
+      </div>
+      <div class="proof-card">
+        <div class="proof-stars">★★★★★</div>
+        <p class="proof-q">"Their career consulting completely changed my trajectory. I'd been stuck at the same level for 2 years. Within 4 months of working with them I had a new role at a better company with a 40% salary increase."</p>
+        <div class="proof-auth"><div class="proof-av pa-b">TF</div><div><div class="proof-n">Taiwo Fashola</div><div class="proof-r">Head of Product · Tech Company, Abuja</div></div></div>
+      </div>
+      <div class="proof-card">
+        <div class="proof-stars">★★★★★</div>
+        <p class="proof-q">"We ran one WhatsApp job blast for a role we'd been struggling to fill for 6 weeks. 140 qualified applications in 48 hours. We've since signed a monthly retainer. Nothing else comes close."</p>
+        <div class="proof-auth"><div class="proof-av pa-c">NK</div><div><div class="proof-n">Nnamdi Kalu</div><div class="proof-r">COO · E-commerce Company, Lagos</div></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PRICING OVERVIEW -->
+<section class="pricing sec">
+  <div class="si">
+    <div style="text-align:center;margin-bottom:14px"><div class="eyebrow" style="display:inline-block">HR Package Overview</div></div>
+    <h2 class="sec-h" style="text-align:center">Find Your Perfect<br/><em>HR Partnership Level.</em></h2>
+    <div class="p-grid">
+      <div class="p-card">
+        <div class="p-tier">Bronze</div><div class="p-name">Essential</div><div class="p-period">HR Foundations · Monthly</div>
+        <div class="p-feats">
+          <div class="p-feat">HR Audit + Advisory (5hrs/wk)</div>
+          <div class="p-feat">Payroll &amp; Compliance</div>
+          <div class="p-feat">Labour Law Advisory</div>
+          <div class="p-feat">2 Recruitments per quarter</div>
+          <div class="p-feat">Employee Handbook</div>
+        </div>
+        <a href="mailto:contact@thegenzhr.com" class="p-btn pb-o">Get a Quote</a>
+      </div>
+      <div class="p-card">
+        <div class="p-tier">Silver</div><div class="p-name">Strategic</div><div class="p-period">HR Strategy · Monthly</div>
+        <div class="p-feats">
+          <div class="p-feat">Everything in Bronze</div>
+          <div class="p-feat">10hrs/wk + Account Manager</div>
+          <div class="p-feat">Performance Management System</div>
+          <div class="p-feat">4 Recruitments per quarter</div>
+          <div class="p-feat">Comp &amp; Benefits Strategy</div>
+        </div>
+        <a href="mailto:contact@thegenzhr.com" class="p-btn pb-o">Get a Quote</a>
+      </div>
+      <div class="p-card p-feat-card">
+        <div class="p-best">Most Popular</div>
+        <div class="p-tier">Gold</div><div class="p-name">Embedded</div><div class="p-period">Full HR Lead · Monthly</div>
+        <div class="p-feats">
+          <div class="p-feat">Everything in Silver</div>
+          <div class="p-feat">Unlimited HR Advisory</div>
+          <div class="p-feat">5 Recruitments per quarter</div>
+          <div class="p-feat">Executive Coaching (quarterly)</div>
+          <div class="p-feat">Sit-in HR Professional</div>
+        </div>
+        <a href="mailto:contact@thegenzhr.com" class="p-btn pb-s">Get a Quote</a>
+      </div>
+      <div class="p-card">
+        <div class="p-tier">Platinum</div><div class="p-name">Complete</div><div class="p-period">Full-Service · Monthly</div>
+        <div class="p-feats">
+          <div class="p-feat">Everything in Gold</div>
+          <div class="p-feat">7 Recruitments per quarter</div>
+          <div class="p-feat">Monthly Coaching + Training</div>
+          <div class="p-feat">Org Restructuring Support</div>
+          <div class="p-feat">Outplacement Services</div>
+        </div>
+        <a href="mailto:contact@thegenzhr.com" class="p-btn pb-o">Get a Quote</a>
+      </div>
+    </div>
+    <p style="text-align:center;font-size:13px;color:var(--muted);margin-top:24px">All packages are subscription-based and fully remote. Pricing tailored to your team size and requirements. <strong style="color:var(--ink)">Contact us for a tailored proposal within 48 hours.</strong></p>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="faq" id="contact">
+  <div class="faq-inner">
+    <div style="text-align:center;margin-bottom:14px"><div class="eyebrow" style="display:inline-block">FAQ</div></div>
+    <h2 class="sec-h" style="text-align:center;margin-bottom:6px">Questions We Hear<br/><em>Most Often.</em></h2>
+    <p style="text-align:center;font-size:14px;color:var(--muted)">Can't find your answer? Email us at <strong>contact@thegenzhr.com</strong></p>
+    <div class="faq-list">
+      <div class="faq-item open">
+        <div class="faq-q">What types of businesses do you work with? <span class="faq-tog">+</span></div>
+        <div class="faq-a"><div class="faq-a-in">We primarily serve SMEs, early-stage startups, and NGOs across Nigeria and Africa. We also work with larger organisations that have existing HR teams but need specialist support for specific projects. For brands, recruiters, and employers, we offer media and sponsorship access to our 106,000-person professional community.</div></div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">How does the remote HR service actually work? <span class="faq-tog">+</span></div>
+        <div class="faq-a"><div class="faq-a-in">All HR services are delivered fully remotely using the latest tools — WhatsApp, Zoom, Slack, email, and HR management platforms. You get a dedicated consultant and account manager, weekly or on-demand advisory, and all deliverables (policies, reports, payroll) handled digitally. Many clients tell us they receive more active HR support with us than they ever had from an in-house team.</div></div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">How is pricing structured for the HR packages? <span class="faq-tog">+</span></div>
+        <div class="faq-a"><div class="faq-a-in">All packages are monthly subscriptions. Pricing is tailored based on your team size, specific scope of services, and business stage. We don't publish fixed prices because we believe in right-sizing the engagement to your actual needs. Contact us and we'll turn around a tailored proposal within 48 hours.</div></div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">How do media and sponsorship packages work? <span class="faq-tog">+</span></div>
+        <div class="faq-a"><div class="faq-a-in">Brands, recruiters, and companies pay to reach our 106,000-person community through newsletter placements, WhatsApp broadcasts, social media campaigns, company spotlights, and event sponsorships. You send us your brief and desired CTA. Our editorial team writes the copy. You approve it before anything goes live. After the campaign, you receive a performance report. Email partnerships@thegenzhr.com to request our media kit.</div></div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">What's included in your recruitment guarantee? <span class="faq-tog">+</span></div>
+        <div class="faq-a"><div class="faq-a-in">For Full-Cycle Recruitment (10% of annual gross salary), we provide a 60-day replacement guarantee — if the hire doesn't work out within 60 days, we replace them at no additional cost. For the Sourcing + Shortlist Service (&#8358;200,000 flat fee), we offer a 30-day replacement guarantee. Both guarantees apply as long as role requirements haven't materially changed.</div></div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">Who is career consulting suitable for? <span class="faq-tog">+</span></div>
+        <div class="faq-a"><div class="faq-a-in">Our career consulting serves three groups: young professionals and Gen Z who need direction, clarity, and career launch support; mid-career professionals navigating pivots, transitions, or plateaus; and senior professionals working on promotion strategy and leadership positioning. Book a discovery call and we'll tell you honestly whether we're the right fit.</div></div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">Can I start with a lower HR package and upgrade? <span class="faq-tog">+</span></div>
+        <div class="faq-a"><div class="faq-a-in">Absolutely. Many clients start on Bronze and upgrade as their team grows. All packages are designed to layer — every higher tier includes everything in the tiers below it. Upgrades can typically be activated within one billing cycle with no disruption to ongoing work.</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-sec">
+  <h2 class="sec-h" style="text-align:center;margin-bottom:14px;position:relative">Ready to Build Something<br/><em>Great Together?</em></h2>
+  <p class="sec-p" style="text-align:center;margin:0 auto 40px;position:relative">Whether you need HR support, career guidance, a recruitment partner, or access to 106,000 professionals — we're ready to work with you.</p>
+  <div class="cta-btns">
+    <a href="mailto:contact@thegenzhr.com" class="cta-dk">Email Us Today →</a>
+    <a href="mailto:partnerships@thegenzhr.com" class="cta-o">Partnership Enquiries</a>
+    <a href="tel:+2348168545860" class="cta-o">+234 816 854 5860</a>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="ft-top">
+    <div class="ft-brand">
+      <div style="display:flex;align-items:center;gap:10px">
+        <div style="width:30px;height:30px;background:var(--lime);border-radius:7px;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:900;color:var(--ink)">GZ</div>
+        <div style="font-size:15px;font-weight:800;color:#fff">The <span style="color:var(--lime)">GenZ</span> HR</div>
+      </div>
+      <p>Nigeria's premier HR and career consulting community. 106,000+ professionals. Four owned channels. One trusted voice. Your partner in growth and success.</p>
+    </div>
+    <div class="ft-col">
+      <h4>Services</h4>
+      <a href="#services">HR Management</a>
+      <a href="#services">Business Consulting</a>
+      <a href="#career">Career Consulting</a>
+      <a href="#recruitment">Talent Recruitment</a>
+      <a href="#services">Legal &amp; Tax Advisory</a>
+      <a href="#media">Media &amp; Sponsorships</a>
+    </div>
+    <div class="ft-col">
+      <h4>HR Packages</h4>
+      <a href="#packages">Bronze — Essential</a>
+      <a href="#packages">Silver — Strategic</a>
+      <a href="#packages">Gold — Embedded</a>
+      <a href="#packages">Platinum — Complete</a>
+    </div>
+    <div class="ft-col">
+      <h4>Contact</h4>
+      <a href="mailto:contact@thegenzhr.com">contact@thegenzhr.com</a>
+      <a href="mailto:partnerships@thegenzhr.com">partnerships@thegenzhr.com</a>
+      <a href="tel:+2348168545860">+234 816 854 5860</a>
+      <a href="https://thegenzhr.substack.com" target="_blank">Newsletter (Substack)</a>
+      <a href="#">LinkedIn</a>
+      <a href="#">Instagram · @thegenzhr</a>
+    </div>
+  </div>
+  <div class="ft-bot">
+    <span>© 2025 The GenZ HR. All rights reserved.</span>
+    <span>Built for Africa's next generation of professionals. 🇳🇬</span>
+  </div>
+</footer>
+
+<script>
+// Nav scroll shadow
+window.addEventListener('scroll', () => {
+  document.getElementById('nav').classList.toggle('scrolled', scrollY > 10);
+});
+
+// Package tabs
+function switchPkg(id, btn) {
+  document.querySelectorAll('.pkg-panel').forEach(p => p.classList.remove('active'));
+  document.querySelectorAll('.pkg-tab').forEach(t => t.classList.remove('active'));
+  document.getElementById('pkg-' + id).classList.add('active');
+  btn.classList.add('active');
+}
+
+// Monetize tabs
+function switchMon(id, btn) {
+  document.querySelectorAll('.mon-panel').forEach(p => p.classList.remove('active'));
+  document.querySelectorAll('.mon-tab').forEach(t => t.classList.remove('active'));
+  document.getElementById('mon-' + id).classList.add('active');
+  btn.classList.add('active');
+}
+
+// FAQ accordion
+document.querySelectorAll('.faq-q').forEach(q => {
+  q.addEventListener('click', () => {
+    const item = q.parentElement;
+    document.querySelectorAll('.faq-item').forEach(i => { if (i !== item) i.classList.remove('open'); });
+    item.classList.toggle('open');
+  });
+});
+
+// Smooth scroll
+document.querySelectorAll('a[href^="#"]').forEach(a => {
+  a.addEventListener('click', e => {
+    const id = a.getAttribute('href').slice(1);
+    const el = document.getElementById(id);
+    if (el) { e.preventDefault(); el.scrollIntoView({ behavior: 'smooth' }); }
+  });
+});
+
+// Intersection observer for scroll-in animations
+if ('IntersectionObserver' in window) {
+  const cards = document.querySelectorAll('.svc-card, .proof-card, .mon-card, .av, .cf, .ex-item, .rc-card, .astat');
+  const obs = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        e.target.style.opacity = '1';
+        e.target.style.transform = 'translateY(0)';
+        obs.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.1 });
+  cards.forEach(c => {
+    c.style.opacity = '0';
+    c.style.transform = 'translateY(20px)';
+    c.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+    obs.observe(c);
+  });
+}
+</script>
+</body>
+</html>
